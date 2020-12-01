@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+/* content */
+.content {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+/* input-text */
+#input-text,
+.output-area {
+  display: block;
+  width: 100%;
+  height: 10vh;
+  padding-top: 10px;
+  padding-left: 3px;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+}
+/* button */
+#btnTranslate,
+#clrBtn {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100px;
+}
+.output-area {
+  text-align: left;
+  border: 1px solid black;
+  padding-top: 1px;
+  margin-top: 2rem;
+  color: gray;
+}
+#clrBtn {
+  visibility: hidden;
+}
