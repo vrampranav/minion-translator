@@ -4,14 +4,16 @@ var btnTrans = document.querySelector("#btnTranslate");
 var outputText = document.querySelector("#output-text");
 var clearBtn = document.querySelector("#clrBtn");
 
-var mockServerUrl = 'https://mockserver.vrampranav.repl.co/translate/rp.json';
+// var mockServerUrl = 'https://mockserver.vrampranav.repl.co/translate/rp.json';
+var minionUrl = 'https://api.funtranslations.com/translate/minion.json';
 //function to append userInput to url
 function urlGenerator(text) {
-    return mockServerUrl + '?text=' + text;
+    return minionUrl + '?text=' + text;
 };
 //Function Error
 function catchError(e) {
-    console.log("Error Occured" + e);
+    window.location.replace('/error.html');
+    return;
 }
 // TranslateBtn Click Event
 btnTrans.addEventListener('click', () => {
@@ -32,10 +34,10 @@ btnTrans.addEventListener('click', () => {
 
     //Changing the output color to black, timeout is used as the response from server slightly gets delayed!
     setTimeout(() => {
-        outputText.style.color = 'black'
+        outputText.style.color = 'black';
+        clearBtn.style.visibility = 'visible';
     }, 400);
     // Making the clear button visible after geting translation!
-    clearBtn.style.visibility = 'visible';
 });
 
 // Clear Button Click Event
@@ -45,4 +47,6 @@ clearBtn.addEventListener('click', () => {
     outputText.style.color = 'gray';
     clearBtn.style.visibility = 'hidden';
 });
+
+
 

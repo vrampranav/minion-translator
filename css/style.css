@@ -38,3 +38,50 @@ body {
 #clrBtn {
   visibility: hidden;
 }
+/* Error */
+.error-img {
+  max-width: 450px;
+  display: block;
+  margin: 10rem auto;
+}
+.error-msg {
+  color: gray;
+}
+.error-msg .invert-color {
+  color: blue;
+}
+#tryBtn {
+  text-decoration: none;
+  background-color: blue;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  color: white;
+}
+/* nav */
+.navigation {
+  text-align: center;
+  background-color: yellow;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+footer {
+  background-color: yellow;
+  padding: 2rem 0;
+  letter-spacing: 3px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* section */
+.section {
+  padding: 2rem 0;
+  text-align: justify;
+}
+.section p {
+  font-size: 1.5rem;
+}
