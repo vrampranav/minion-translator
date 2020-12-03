@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: #fde74c;
+  --secondary-color: #1b3b6f;
+  --text-secondary: gray;
 }
 /* content */
 .content {
@@ -11,29 +19,36 @@ body {
 #input-text,
 .output-area {
   display: block;
-  width: 100%;
+  width: 60%;
   height: 10vh;
   padding-top: 10px;
   padding-left: 3px;
+  margin: auto;
   margin-top: 3rem;
   border-radius: 0.5rem;
+  font-size: 1.2rem;
 }
 /* button */
 #btnTranslate,
 #clrBtn {
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 0;
   border-radius: 0.5rem;
   cursor: pointer;
-  width: 100px;
+  width: 120px;
+  background-color: var(--secondary-color);
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
 }
 .output-area {
   text-align: left;
   border: 1px solid black;
   padding-top: 1px;
   margin-top: 2rem;
-  color: gray;
+  color: var(--text-secondary);
 }
 #clrBtn {
   visibility: hidden;
@@ -42,32 +57,38 @@ body {
 .error-img {
   max-width: 450px;
   display: block;
-  margin: 10rem auto;
+  margin: 8rem auto;
 }
 .error-msg {
-  color: gray;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
 }
 .error-msg .invert-color {
-  color: blue;
+  color: var(--secondary-color);
 }
 #tryBtn {
   text-decoration: none;
-  background-color: blue;
-  padding: 0.7rem;
+  background-color: var(--secondary-color);
+  padding: 0.7rem 1rem;
   border-radius: 0.6rem;
   color: white;
+  font-weight: bold;
 }
 /* nav */
 .navigation {
   text-align: center;
-  background-color: yellow;
-  padding: 2rem;
+  background-color: var(--primary-color);
+  padding: 1.7rem;
   font-weight: bold;
   font-size: 2rem;
+  letter-spacing: 3px;
+  color: black;
+  position: sticky;
+  top: 0;
 }
 
 footer {
-  background-color: yellow;
+  background-color: var(--primary-color);
   padding: 2rem 0;
   letter-spacing: 3px;
   text-align: center;
@@ -84,4 +105,31 @@ footer {
 }
 .section p {
   font-size: 1.5rem;
+}
+
+/* MinionImg */
+#minion-img {
+  margin-top: 2rem;
+  max-width: 400px;
+  height: 400px;
+}
+hr {
+  margin: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+}
+@media (max-width: 800px) {
+  #input-text,
+  .output-area {
+    display: block;
+    width: 80%;
+  }
+  #minion-img {
+    max-width: 300px;
+    height: 300px;
+  }
+  .error-img {
+    max-width: 300px;
+    display: block;
+  }
 }
