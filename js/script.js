@@ -26,13 +26,13 @@ btnTrans.addEventListener('click', () => {
     }
 
     //Fetching the translation from the mock server
-    fetch(urlGenerator(userText.trim()))
+    var res = fetch(urlGenerator(userText.trim()))
         .then(response => response.json())
         .then(jsonResponse => {
             outputText.innerText = jsonResponse.contents.translated;
         })
         .catch(e => catchError(e))
-
+    console.log(res);
     //Changing the output color to black, timeout is used as the response from server slightly gets delayed!
     setTimeout(() => {
         outputText.style.color = 'black';
