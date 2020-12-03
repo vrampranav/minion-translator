@@ -8,6 +8,7 @@ var clearBtn = document.querySelector("#clrBtn");
 var minionUrl = 'https://api.funtranslations.com/translate/minion.json';
 //function to append userInput to url
 function urlGenerator(text) {
+    // console.log(encodeURI(minionUrl + '?text=' + text))
     return minionUrl + '?text=' + text;
 };
 //Function Error
@@ -43,7 +44,7 @@ btnTrans.addEventListener('click', () => {
 // Clear Button Click Event
 clearBtn.addEventListener('click', () => {
     userInput.value = '';
-    outputText.innerText = "Minion Text will come here!";
+    outputText.innerText = "Minion translation here!";
     outputText.style.color = 'gray';
     clearBtn.style.visibility = 'hidden';
 });
