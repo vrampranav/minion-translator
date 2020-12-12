@@ -26,19 +26,17 @@ btnTrans.addEventListener('click', () => {
     }
 
     //Fetching the translation from the mock server
-    var res = fetch(urlGenerator(userText.trim()))
+    fetch(urlGenerator(userText.trim()))
         .then(response => response.json())
         .then(jsonResponse => {
             outputText.innerText = jsonResponse.contents.translated;
         })
         .catch(e => catchError(e))
-    console.log(res);
-    //Changing the output color to black, timeout is used as the response from server slightly gets delayed!
-    setTimeout(() => {
-        outputText.style.color = 'black';
-        clearBtn.style.visibility = 'visible';
-    }, 400);
+    // console.log(res);
+    //Changing the output color to black
     // Making the clear button visible after geting translation!
+    outputText.style.color = 'black';
+    clearBtn.style.visibility = 'visible';
 });
 
 // Clear Button Click Event
